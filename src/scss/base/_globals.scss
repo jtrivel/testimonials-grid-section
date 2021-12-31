@@ -1,0 +1,30 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: v.$primaryFont;
+  background-color: v.$lightGrayBlue;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @include m.tablet {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.container {
+  max-width: 37.5rem;
+  width: 95%;
+  margin-inline: auto;
+  @include m.tablet {
+    max-width: 130rem;
+  }
+}
+
