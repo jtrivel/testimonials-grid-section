@@ -2,12 +2,18 @@
 @use "../base/mixins" as m;
 
 .footer {
-  text-align: center;
-  color: v.$darkBlueBg;
-  font-weight: 600;
-
-  &__link {
-    text-decoration: none;
-    color: hsl(228, 45%, 44%);
+  display: none;
+  @include m.desktop {
+    padding: 2rem;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: v.$darkBlueBg;
+    font-weight: 600;
+    &__link {
+      text-decoration: none;
+      color: hsl(228, 45%, 44%);
+    }
   }
 }
